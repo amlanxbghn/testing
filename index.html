@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+</head>
+<body>
+
+    <header>
+        <body>
+    <div class="translucent-layer"></div>
+</body>
+
+        <div class="header-content">
+            <div id="left-nav">
+                <p id="first"><b>+1 5589 55488 55</b></p>
+                <p><b>&#128336 Mon-Sat: 11:00 AM - 23:00 PM</b></p>
+            </div>
+            <div id="navigation">
+                <h1><b>Lorem-Ipsum</b></h1>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#chefs">Chefs</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
+                        <li><a href="#book">Book a Table</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="home-image">
+                <h2>Lorem Ipsum Dolor</h2>
+                <p>Ut velit est quam dodlor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequii nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <div>
+                    <a href="#menu">Our Menu</a>
+                    <a href="#book">Book a Table</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/about.jpg" alt="About Image">
+                </div>
+                <div class="about-text">
+                    <h3>Eum ipsam laborum deleniti velit pariatur architecto out nihil</h3>
+            <p>Lorem ipsum dodlor sit amet, consectetur adipiscing elit, sed do elusmod tempor incididunt ut laborre et dolore magna aliqua. Duis aute irure dolor in reprehenderit</p>
+            <p> </p>
+            <p>Lorem ipsum dolor sit amet, comsectetur adiplscing elit, sed do elusmod tempir incididunt ut labore et dolore magna aliqua.</p>
+            <h4>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
+            <h4>Duis aute irure dodlor in reprehenderit in voluptate velit.</h4>
+            <h4>Ullamco laboris nisi ut aliquip ex ea commodod consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</h4>
+            <p>Ullamco laboris niti ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat no proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="menu">
+            <h2>Menu</h2>
+            <div class="menu-buttons">
+                <button onclick="showAllItems()">Show All</button>
+                <button onclick="filterItems('starters')">Starters</button>
+                <button onclick="filterItems('salads')">Salads</button>
+                <button onclick="filterItems('speciality')">Speciality</button>
+            </div>
+    
+            <div class="menu-items" id="menuItems">
+            </div>
+        </section>
+
+        <script>
+            const menuItemsData = [
+                { name: 'Lobster Bisque', type: 'starters', price: '$5.95' },
+                { name: 'Crab Cake', type: 'starters', price: '$7.95' },
+                { name: 'Tuscan Grilled', type: 'speciality', price: '$9.95' },
+                { name: 'Greek Salad', type: 'salads', price: '$9.95' },
+                { name: 'Lobster Roll', type: 'speciality', price: '$12.95' },
+                { name: 'Bread barrel', type: 'speciality', price: '$6.95' },
+                { name: 'Caesar Selections', type: 'salads', price: '$6.95' },
+                { name: 'Mozzarella Stick', type: 'starters', price: '$6.95' },
+                { name: 'Spinach Salad', type: 'salads', price: '$9.95' },
+
+            ];
+
+            function showAllItems() {
+                const menuItemsContainer = document.getElementById('menuItems');
+                menuItemsContainer.innerHTML = ''; 
+                menuItemsData.forEach(item => {
+                    const menuItem = document.createElement('div');
+                    menuItem.textContent = `${item.name} ------------------------- ${item.price}`;
+                    menuItemsContainer.appendChild(menuItem);
+                });
+            }
+
+            function filterItems(type) {
+                const menuItemsContainer = document.getElementById('menuItems');
+                menuItemsContainer.innerHTML = ''; 
+                const filteredItems = menuItemsData.filter(item => item.type === type);
+                filteredItems.forEach(item => {
+                    const menuItem = document.createElement('div');
+                    menuItem.textContent = `${item.name} ------------------------- ${item.price}`;
+                    menuItemsContainer.appendChild(menuItem);
+                });
+            }
+
+            showAllItems();
+        </script>
+
+
+        <section id="events">
+            <h2>Events</h2>
+            <div class="events-container">
+                <div class="event-page event1">
+                    <h3>Contact us for Event Catering</h3>
+                    <p>Good food for your guests.</p>
+                </div>
+
+                <div class="event-page event2">
+                    <h3>Private Parties</h3>
+                    <p>Details about Event 2...</p>
+                </div>
+
+                <div class="event-page event3">
+                    <h3>Family Events</h3>
+                    <p>Details about Event 3</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="book">
+            <h2>Book a Table</h2>
+            <p>Fill in your details to reserve a table:</p>
+    
+            <form id="tableBookingForm">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div>
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <div>
+                    <label for="people">Number of People:</label>
+                    <input type="number" id="people" name="people" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <div>
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </section>
+
+        <style>
+            .events-container {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            width: 100%;
+            height: 300px; 
+        }
+
+        .event-page {
+            scroll-snap-align: start;
+            flex: 0 0 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        </style>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+    
+            <div class="photo-gallery">
+                <div class="photo">
+                    <img src="images/gallery/gallery-1.jpg" alt="Image 1">
+                </div>
+                <div class="photo">
+                    <img src="images/gallery/gallery-2.jpg" alt="Image 2">
+                </div>
+                <div class="photo">
+                    <img src="images/gallery/gallery-3.jpg" alt="Image 3">
+                </div>
+                <div class="photo">
+                    <img src="images/gallery/gallery-4.jpg" alt="Image 4">
+                </div>
+                <div class="photo">
+                    <img src="images/gallery/gallery-5.jpg" alt="Image 5">
+                </div>
+                <div class="photo">
+                    <img src="images/gallery/gallery-6.jpg" alt="Image 6">
+                </div>
+                <div class="photo">
+                    <img src="images/gallery/gallery-7.jpg" alt="Image 7">
+                </div>
+                <div class="photo">
+                    <img src="images/gallery/gallery-8.jpg" alt="Image 8">
+                </div>
+            </div>
+        </section>
+
+        <section id="chefs">
+            <h2>Our Chefs</h2>
+    
+            <div class="chefs-container">
+                <div class="chef">
+                    <img id="main-img" src="images/chefs/chefs-1.jpg" alt="Chef 1">
+                    <h3>Walter White</h3>
+                    <p><i>Master Chef</i></p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/chef1" target="_blank" rel="noopener noreferrer">
+                            <img class="logo-chef" src="images/Twitter_Logo_new.png" alt="Twitter">
+                        </a>
+                        <a href="https://facebook.com/chef1" target="_blank" rel="noopener noreferrer">
+                            <img class="logo-chef" src="images/f_logo_RGB-Blue_1024.png" alt="Facebook">
+                        </a>
+                        <a href="https://instagram.com/chef1" target="_blank" rel="noopener noreferrer">
+                            <img class="logo-chef" src="images/insta_logo.png" alt="Instagram">
+                        </a>
+                        <a href="https://linkedin.com/chef1" target="_blank" rel="noopener noreferrer">
+                            <img class="logo-chef" src="images/linkedin_logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="chef">
+                    <img id="main-img" src="images/chefs/chefs-2.jpg" alt="Chef 2">
+                    <h3>Sarah Jhonson</h3>
+                    <p><i>Patissier</i></p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/chef2" target="_blank" rel="noopener noreferrer">
+                            <img src="images/Twitter_Logo_new.png" alt="Twitter">
+                        </a>
+                        <a href="https://facebook.com/chef2" target="_blank" rel="noopener noreferrer">
+                            <img src="images/f_logo_RGB-Blue_1024.png" alt="Facebook">
+                        </a>
+                        <a href="https://instagram.com/chef2" target="_blank" rel="noopener noreferrer">
+                            <img src="images/insta_logo.png" alt="Instagram">
+                        </a>
+                        <a href="https://linkedin.com/chef2" target="_blank" rel="noopener noreferrer">
+                            <img src="images/linkedin_logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="chef">
+                    <img id="main-img" src="images/chefs/chefs-3.jpg" alt="Chef 3">
+                    <h3>William Anderson</h3>
+                    <p><i>Cook</i></p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/chef3" target="_blank" rel="noopener noreferrer">
+                            <img src="images/Twitter_Logo_new.png" alt="Twitter">
+                        </a>
+                        <a href="https://facebook.com/chef3" target="_blank" rel="noopener noreferrer">
+                            <img src="images/f_logo_RGB-Blue_1024.png" alt="Facebook">
+                        </a>
+                        <a href="https://instagram.com/chef3" target="_blank" rel="noopener noreferrer">
+                            <img src="images/insta_logo.png" alt="Instagram">
+                        </a>
+                        <a href="https://linkedin.com/chef3" target="_blank" rel="noopener noreferrer">
+                            <img src="images/linkedin_logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts">
+            <h2>Contact Us</h2>
+            <p>Fill in your details and we'll get back to you as soon as possible:</p>
+            <div class="contacts">
+                <div class="contacts">
+                    <h3>Location</h3>
+                    <p>A108 Adam Street</p>
+                    <p>New York, NY 535022</p>
+                </div>
+        
+                <div class="contacts">
+                    <h3>Open Hours</h3>
+                    <p>Monday-Saturday: 11:00 AM - 23:00 PM</p>
+                </div>
+        
+                <div class="contacts">
+                    <h3>Email</h3>
+                    <p>info@example.com</p>
+                    <p>contact@example.com</p>
+                </div>
+        
+                <div class="contacts">
+                    <h3>Call</h3>
+                    <p>+1 5589 55488 51</p>
+                    <p>+1 5589 22475 14</p>
+                </div>
+            </div>
+        </section>
+
+    <footer>
+        <div class="restaurant-info">
+            <h3>Lorem-Ipsum</h3>
+            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore carporis magni eligendi fuga maxime saepe commodi placeat.</p>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://twitter.com/restaurant" target="_blank" rel="noopener noreferrer">
+                <img src="images/Twitter_Logo_new.png" alt="Twitter">
+            </a>
+            <a href="https://facebook.com/restaurant" target="_blank" rel="noopener noreferrer">
+                <img src="images/f_logo_RGB-Blue_1024.png" alt="Facebook">
+            </a>
+            <a href="https://instagram.com/restaurant" target="_blank" rel="noopener noreferrer">
+                <img src="images/insta_logo.png" alt="Instagram">
+            </a>
+            <a href="skype:restaurant_username?call" target="_blank" rel="noopener noreferrer">
+                <img src="images/skype_logo.png" alt="Skype">
+            </a>
+            <a href="https://linkedin.com/company/restaurant" target="_blank" rel="noopener noreferrer">
+                <img src="images/linkedin_logo.png" alt="LinkedIn">
+            </a>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Restaurant Name. All rights reserved.</p>
+            <p>Designed by Amlan Buragohain</p>
+        </div>
+    </footer>
+        
+
+    </main>
+</body>
+</html>

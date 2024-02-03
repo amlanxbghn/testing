@@ -1,0 +1,512 @@
+header {
+    width: 100vw;
+    padding: 20px;
+    background-color: #fff;
+}
+
+h1 {
+    font-family: cursive;
+    margin: 0;
+}
+
+header p {
+    color: orange;
+    position: relative;
+}
+
+#first::before {
+    content: '\1F4DE';
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+header p::after {
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+#left-nav {
+    display: flex;
+    gap: 30px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child a {
+    background-color: orange;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Your Minimalistic Font', sans-serif;
+}
+
+nav ul li a {
+    font-weight: bold;
+    font-family: 'Your Cool Font', sans-serif;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li:not(:last-child) a:hover {
+    color: rgb(255, 166, 0);
+}
+
+nav ul li:last-child a {
+    transition: none;
+}
+
+.home-image {
+    scroll-margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('/images/specials-2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.37;
+    width: 100%;
+    z-index: -6;
+    height: 100vh;
+}
+
+.home-image{
+    z-index: 10;
+}
+
+#home a {
+    background-color: orange;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    margin-top: 60px;
+}
+
+#home a:hover {
+    background-color: rgb(255, 227, 175);
+    color: orange;
+    box-shadow: 3px 3px 5px black;
+}
+
+#home p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav ul li:last-child a:hover {
+    background-color: rgb(255, 227, 175);
+    color: orange;
+    box-shadow: 3px 3px 5px black;
+}
+
+#home a:nth-child(2) {
+}
+
+#home div {
+    margin-top: 50px;
+}
+
+#about {
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image img {
+    margin-left: 110px;
+    max-width: 67%;
+    height: auto;
+    display: block;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li {
+    font-family: 'Your Cool Font', sans-serif;
+}
+
+#navigation {
+    font-family: 'Your Cool Font', sans-serif;
+}
+
+nav ul li a {
+    font-family: 'Your Cool Font', sans-serif;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url('path/to/your/menu-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.menu-buttons button {
+    background-color: orange;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-buttons button:hover {
+    background-color: rgb(255, 227, 175);
+    color: orange;
+    box-shadow: 3px 3px 5px black;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.menu-items div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.menu-items div:hover {
+    background-color: rgba(255, 227, 175, 0.8);
+    box-shadow: 3px 3px 5px black;
+}
+
+#book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('path/to/your/book-a-table-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+#tableBookingForm {
+    max-width: 500px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#tableBookingForm div {
+    margin-bottom: 15px;
+}
+
+#tableBookingForm label {
+    display: block;
+    font-weight: bold;
+}
+
+#tableBookingForm input[type="text"],
+#tableBookingForm input[type="email"],
+#tableBookingForm input[type="tel"],
+#tableBookingForm input[type="date"],
+#tableBookingForm input[type="time"],
+#tableBookingForm textarea {
+    width: calc(100% - 10px);
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#tableBookingForm textarea {
+    resize: vertical;
+}
+
+#tableBookingForm button[type="submit"] {
+    background-color: orange;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#tableBookingForm button[type="submit"]:hover {
+    background-color: rgb(255, 227, 175);
+}
+
+#gallery {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('path/to/your/gallery-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+
+.photo {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.photo img:hover {
+    transform: scale(1.05);
+}
+
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.fullscreen img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+#chefs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('path/to/chefs-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.chefs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 25px;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+
+.chef {
+    width: calc(100% - 25px * 2);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin: 0 25px;
+}
+
+#main-img {
+    height: 200px;
+    width: 200px;
+}
+
+.chef img {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.chef a {
+    text-decoration: none;
+}
+
+.chef:hover {
+    transform: scale(1.05);
+}
+
+#contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('path/to/contact-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.contacts {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contacts h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contacts p {
+    margin-bottom: 5px;
+}
+
+#contacts,
+#contacts h3,
+#contacts p {
+    font-family: 'Your Cool Font', sans-serif;
+    color: #333;
+}
+
+.contacts:hover {
+    background-color: rgba(255, 227, 175, 0.8);
+    box-shadow: 3px 3px 5px black;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff7f00;
+}
+
+.restaurant-info h3 {
+    color: #ff7f00;
+}
+
+.social-links img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+.event-page {
+    position: relative;
+    color: #fff;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.event1 {
+    background-image: url('images/events-bg.jpg');
+    padding-top: 56.25%;
+}
+
+.event2 {
+    background-image: url('images/event-custom.jpg');
+    padding-top: 56.25%;
+}
+
+.event3 {
+    background-image: url('images/event-private.jpg');
+    padding-top: 56.25%;
+}
+
+.event-page h3,
+.event-page p {
+    margin: 0;
+}
